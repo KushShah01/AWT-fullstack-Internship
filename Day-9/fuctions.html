@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addition(n1,n2){
+            return n1+n2;
+        }
+        console.log(addition(10,7))
+
+        const square = function(number){
+            return number*number;
+        }
+        const x=square(4);
+        console.log(x)
+
+
+        const a=["hydrogen","helium","lithium"]
+        const a2=a.map(function (s) {
+            return s.length;
+        })
+        console.log("normal way",a2);
+        const a3=a.map((s)=>s.length);
+
+        console.log("using arrow function",a3);
+
+//all function declaration are effictively at the top of scope
+        console.log(square(5));//25
+        document.write(square(3));
+        
+    </script>
+</body>
+</html>

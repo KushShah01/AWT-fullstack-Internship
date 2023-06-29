@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="demoOnClick()">Click Event</button>
+    <hr />
+    <button ondblclick="demoOnDblClick()">Click Event</button>
+    <hr />
+
+    <b>Focus:</b><br />
+    <input type="text" placeholder="Focus Event Demo" id="txtFocus" onfocus="demoOnFocus()">
+    <hr />
+
+    <b>Blur:</b><br />
+    <input type="text" placeholder="Blur Event Demo" id="txtBlur" onblur="demoOnBlur()">
+    <hr />
+
+    <b>Keypress:</b><br />
+    <input type="text" placeholder="Keypress Event Demo" id="txtKeypress" onkeypress="demoOnKeypress()">
+    <hr />
+
+    <b>Keyup:</b><br />
+    <input type="text" placeholder="Keyup Event Demo" id="txtKeyup" onkeyup="demoOnKeyUp()">
+    <hr />
+
+    <script>
+        function demoOnClick() {
+            alert("click me")
+        }
+
+        function demoOnDblClick() {
+            alert("double click")
+        }
+
+        function demoOnFocus() {
+            document.getElementById('txtFocus').style.backgroundColor = "Red";
+        }
+
+        function demoOnBlur() {
+            document.getElementById('txtBlur').style.backgroundColor = "Green";
+        }
+        function demoOnKeypress() {
+            alert("Keypress Done")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            margin-left: 5px;
+        }
+        .container{
+            /* position: absolute; */
+            width: 300px;
+            height: 300px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body id="set">
+    <div id="saa" class="container" ></div>
+    <br/>
+    <label for="" style="font-weight: bold; margin-top: 2px;">Yellow Color Of Body:</label><br/>
+    <hr/><button onclick="demoOnClick()" id="back">Yellow Body Backgroud</button><hr/><br/>
+    <label for="color_pick" style="font-weight: bold;">Change Color Of Body:</label><br/>
+    <hr/><input onclick="channgeColor('Red')" id="colors" type="color" value="#fff"><hr/><br/>
+    <label for="color_pick" style="font-weight: bold;">Change Color Of Container:</label><br/>
+    <hr/><button onclick="heta()" id="geta">Blue Color Container</button><hr/><br/>
+    <label for="color_pick" style="font-weight: bold;">Choose Color Of Container:</label><br/>
+    <hr/><button onclick="question()" id="que">Choose the Color of Container</button><hr/>
+
+
+    <script>
+        document.getElementById('back').style.backgroundColor="Yellow"
+       function demoOnClick(){
+           let b= document.getElementById('set').style.backgroundColor="Yellow"
+    
+        document.getElementById('saa').style.backgroundColor = "White"
+        
+        }
+
+        function colors(){
+            document.getElementById('colors')
+        }
+        
+        function heta(){
+            document.getElementById('geta').style.backgroundColor='lightblue'
+            document.getElementById('saa').style.backgroundColor='lightblue'
+            document.getElementById('set').style.backgroundColor = "White"
+        }
+
+        function question(){
+           let clr=prompt("What Color you Want?");
+
+            document.getElementById('set').style.backgroundColor= clr;
+            document.getElementById('saa').style.backgroundColor = "White"
+        }
+
+        document.getElementById('colors').addEventListener("change",function(){
+            document.getElementById('set').style.backgroundColor=this.value;
+        })
+    </script>
+</body>
+</html>
